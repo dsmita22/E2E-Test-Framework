@@ -1,0 +1,23 @@
+{
+    "chromeWebSecurity": false,
+    "retries": {
+      "runMode": 1,
+      "openMode": 3
+    },
+    "screenshotsFolder": "cypress/screenshots",
+    "reporter": "cypress-multi-reporters",
+    "fixturesFolder": "cypress/fixtures",
+    "integrationFolder": "cypress/integration/tests",
+    "pageLoadTimeout": 60000,
+    "execTimeout": 60000,
+    "waitForAnimations": true,
+    "watchForFileChanges": false,
+    "videosFolder": "cypress/videos",
+    "trashAssetsBeforeRuns": true,
+    "supportFile": "cypress/support/index.js",
+    "pluginsFile": "cypress/plugins/index.js",
+    "experimentalFetchPolyfill": true,
+    "reporterOptions": {
+      "configFile": "reporterOptions.json"
+    }
+  }
