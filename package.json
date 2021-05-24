@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open"
+    "report-mkdir": "mkdirp cypress/reports  && mkdirp cypress/reports/mocha && mkdirp cypress/reports/mochareports && mkdirp cypress/reports/mochareport",
+    "clean-reports": "rimraf cypress/reports/* ;rimraf cypress/logs/* ; rimraf cypress/results/* || true",
+    "combine-reports": "mochawesome-merge  ./cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
+    "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareport --inline",
+    "cy:test:report": "npm run report-mkdir && npm run combine-reports && npm run generate-report",
+    "cypress:open": "cypress open",
+    "cy:run:headless": "cypress run --headless --browser chrome --env configFile=test --spec 'cypress/integration/tests/login.spec.js'"
   },
   "repository": {
     "type": "git",
@@ -19,6 +25,12 @@
   "dependencies": {},
   "devDependencies": {
     "@testing-library/cypress": "^7.0.6",
-    "cypress": "^7.3.0"
+    "cypress": "^7.3.0",
+    "cypress-multi-reporters": "1.5.0",
+    "mocha-junit-reporter": "2.0.0",
+    "mochawesome": "6.2.2",
+    "mochawesome-merge": "4.2.0",
+    "mochawesome-report-generator": "5.2.0",
+    "mocha": "8.4.0"
   }
 }

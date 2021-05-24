@@ -4,6 +4,22 @@
       "runMode": 1,
       "openMode": 3
     },
+    "reporterOptions": {
+      "reporterEnabled": "mocha-junit-reporter, mochawesome",
+      "mochaJunitReporterReporterOptions": {
+        "mochaFile": "cypress/reports/junit/cypress-[hash].xml",
+        "toConsole": false
+      },
+      "mochawesomeReporterOptions": {
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      }
+    },
+      
     "screenshotsFolder": "cypress/screenshots",
     "reporter": "cypress-multi-reporters",
     "fixturesFolder": "cypress/fixtures",
@@ -13,11 +29,9 @@
     "waitForAnimations": true,
     "watchForFileChanges": false,
     "videosFolder": "cypress/videos",
+    "video": false,
     "trashAssetsBeforeRuns": true,
     "supportFile": "cypress/support/index.js",
     "pluginsFile": "cypress/plugins/index.js",
-    "experimentalFetchPolyfill": true,
-    "reporterOptions": {
-      "configFile": "reporterOptions.json"
-    }
+    "experimentalFetchPolyfill": true
   }
