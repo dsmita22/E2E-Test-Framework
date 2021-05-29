@@ -2,7 +2,7 @@
     "chromeWebSecurity": false,
     "retries": {
       "runMode": 1,
-      "openMode": 3
+      "openMode": 1
     },
     "reporterOptions": {
       "reporterEnabled": "mocha-junit-reporter, mochawesome",
