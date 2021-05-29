@@ -1,8 +1,8 @@
 {
     "chromeWebSecurity": false,
     "retries": {
-      "runMode": 1,
-      "openMode": 1
+      "runMode": 0,
+      "openMode": 0
     },
     "reporterOptions": {
       "reporterEnabled": "mocha-junit-reporter, mochawesome",
@@ -33,5 +33,5 @@
     "trashAssetsBeforeRuns": true,
     "supportFile": "cypress/support/index.js",
     "pluginsFile": "cypress/plugins/index.js",
-    "experimentalFetchPolyfill": true
+    "experimentalFetchPolyfill": false
   }

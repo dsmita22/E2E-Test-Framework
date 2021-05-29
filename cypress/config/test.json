@@ -2,7 +2,7 @@
 {
   "env": {
     "BASE_URL": "http://bank-of-anthos.xyz",
-    "USERNAME": "testuser",
-    "PASSWORD": "testuser"
+    "USERNAME": "test_user",
+    "PASSWORD": "test_user"
   }
 }
