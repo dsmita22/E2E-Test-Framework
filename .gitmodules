@@ -1,3 +1,4 @@
 [submodule "ExpenseWeb"]
 	path = ExpenseWeb
-	url = https://github.com/dipjyotimetia/ExpenseWeb
+	url = git@github.com:dipjyotimetia/ExpenseWeb.git
+	update = checkout
