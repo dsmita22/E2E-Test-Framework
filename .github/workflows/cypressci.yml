@@ -12,7 +12,7 @@ jobs:
         run: |
           npm install
       - name: Setup Aplication under test
-        run: docker-compose -f ExpenseWeb\docker-compose.yml up -d
+        run: docker-compose -f ExpenseWeb/docker-compose.yml up -d
       - name: Cypress E2E Test
         uses: cypress-io/github-action@v2.9.12
         with:
