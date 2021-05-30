@@ -24,4 +24,4 @@
 
 #### Generate Report Locally:
 
-- `npm run cy:test:report` t combine mocha json report and generate html report
+- `npm run cy:test:report` to combine mocha json report and generate html report
