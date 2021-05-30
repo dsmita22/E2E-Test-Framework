@@ -11,9 +11,11 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: recursive
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'    
       - name: Install dependencies
         run: |
-          sudo chown -R $USER /usr/local/lib/node_modules/cy2/bin/cy2
           npm install -g cy2
           npm install
       - name: Setup Aplication under test
