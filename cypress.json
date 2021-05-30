@@ -33,5 +33,6 @@
     "trashAssetsBeforeRuns": true,
     "supportFile": "cypress/support/index.js",
     "pluginsFile": "cypress/plugins/index.js",
-    "experimentalFetchPolyfill": false
+    "experimentalFetchPolyfill": false,
+    "projectId": "abcdef"
   }

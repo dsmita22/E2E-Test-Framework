@@ -13,9 +13,14 @@ jobs:
           submodules: recursive
       - name: Install dependencies
         run: |
+          npm i -g cy2
           npm install
       - name: Setup Aplication under test
         run: docker-compose -f ExpenseWeb/docker-compose.yml up -d
+      - name: Setup Sorry Cypress
+        run: docker-compose up -d
+      - name: E2E parallel Test
+        run: CYPRESS_API_URL="http://localhost:1234" cy2 run  --parallel --record --key abcdef --ci-build-id hello-cypress    
       - name: Cypress E2E Test
         uses: cypress-io/github-action@v2.9.12
         with:
