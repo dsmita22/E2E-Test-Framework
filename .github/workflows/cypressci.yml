@@ -16,4 +16,4 @@ jobs:
       - name: Cypress E2E Test
         uses: cypress-io/github-action@v2.9.12
         with:
-          spec: cypress/integration/depositFunds.spec.js
+          spec: cypress/integration/tests/depositFunds.spec.js
