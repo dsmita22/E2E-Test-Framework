@@ -19,7 +19,7 @@
 
 #### Test:
 
-- `npm run cy:run:headless` run specific test in chrome in headless mode in chrome browser
+- `npm run cy:run:headless` run specific test in chrome in headless mode
 - `npm run cypress:open` for test development and run(_Test Watcher is set to false_)
 
 #### Generate Report Locally:
