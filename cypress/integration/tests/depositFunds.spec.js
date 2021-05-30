@@ -57,12 +57,6 @@ describe("Deposit Funds", () => {
       const num = oldValue + amount;
       expect(newValue).to.eq(num);
     });
-    cy.get("table")
-      .find("tbody")
-      .within(() => {
-        // all searches are automatically rooted to the found tr element
-        cy.get("td").eq(1).contains("My first project");
-      });
   });
 
 
