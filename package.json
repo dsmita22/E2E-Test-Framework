@@ -9,7 +9,7 @@
     "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareport --inline",
     "cy:test:report": "npm run report-mkdir && npm run combine-reports && npm run generate-report",
     "cypress:open": "cypress open",
-    "cy:run:headless": "cypress run --headless --browser chrome --env configFile=test --spec 'cypress/integration/tests/sample.spec.js'"
+    "cy:run:headless": "cypress run --headless --browser chrome --env configFile=test --spec 'cypress/integration/tests/expenseWeb.spec.js'"
   },
   "repository": {
     "type": "git",
