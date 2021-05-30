@@ -33,7 +33,7 @@ describe("Deposit Funds", () => {
   });
 
 
-  it("Balance check after Deposit Funds", () => {
+  xit("Balance check after Deposit Funds", () => {
     // prettier-ignore
     const amount = 10.40;
     let oldValue = 0;
