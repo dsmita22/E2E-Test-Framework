@@ -13,7 +13,7 @@ jobs:
           submodules: recursive
       - name: Install dependencies
         run: |
-          npm i -g cy2
+          npm install -g cy2
           npm install
       - name: Setup Aplication under test
         run: docker-compose -f ExpenseWeb/docker-compose.yml up -d
