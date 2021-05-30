@@ -13,7 +13,7 @@ jobs:
           submodules: recursive
       - name: Install dependencies
         run: |
-          sudo chown -R $USER /usr/local/lib/node_modules
+          sudo chown -R $USER /usr/local/lib/node_modules/cy2/bin/cy2
           npm install -g cy2
           npm install
       - name: Setup Aplication under test
