@@ -1,3 +1,4 @@
+/// <reference types="Cypress" />
 import PAGES from "../../support/pages";
 import {
   depositButton,
@@ -10,9 +11,12 @@ import {
 } from "../../selectors/depositeForm";
 
 describe("Deposit Funds", () => {
+  
   beforeEach(() => {
     cy.login(PAGES.signIn);
   });
+
+
   it("Deposit Funds ui validation", () => {
     cy.get(depositButton).click();
     cy.get(accountDropdown).select("New External Account");
@@ -27,6 +31,8 @@ describe("Deposit Funds", () => {
     );
     cy.findAllByText(/please enter a valid amount\./i).should("be.visible");
   });
+
+
   it("Balance check after Deposit Funds", () => {
     // prettier-ignore
     const amount = 10.40;
@@ -58,6 +64,8 @@ describe("Deposit Funds", () => {
         cy.get("td").eq(1).contains("My first project");
       });
   });
+
+
   it("Balance deposite using New External Account and checking details added to the table", () => {
     const d = new Date().getTime();
     const accountNum = parseInt(Math.random().toFixed(10).replace("0.", ""));

@@ -1,3 +1,4 @@
+/// <reference types="Cypress" />
 import "@testing-library/cypress/add-commands";
 import { BASE_URL, USERNAME, PASSWORD } from "../config/config";
 
