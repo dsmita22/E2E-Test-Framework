@@ -7,7 +7,7 @@
 
 #### Write Code:
 
-- Add `/// <reference types="Cypress" />` and `/// <reference types="../support" />` if required `/// <reference types="cypress-downloadfile"/>` reference on the top, to get typed reference.
+- Add `/// <reference types="Cypress" />` on the top, to get typed reference.
 - Add new spec file with the format sampleTest\*\_spec.js
 - Write helper methods in _support/actions.js_
 - Add mock data files in _fixtures/_
