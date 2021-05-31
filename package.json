@@ -9,7 +9,8 @@
     "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareport --inline",
     "cy:test:report": "npm run report-mkdir && npm run combine-reports && npm run generate-report",
     "cypress:open": "cypress open",
-    "cy:run:headless": "cypress run --headless --browser chrome --env configFile=test --spec 'cypress/integration/tests/expenseWeb.spec.js'"
+    "cy:run:headless": "cypress run --headless --browser chrome --env configFile=test --spec 'cypress/integration/tests/expenseWeb.spec.js'",
+    "api:test": "jest api/tests --detectOpenHandles"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
     "cypress": "^7.4.0",
     "cypress-multi-reporters": "1.5.0",
     "cypress-plugin-tab": "^1.0.5",
+    "jest": "^26.6.3",
     "mocha": "8.4.0",
     "mocha-junit-reporter": "2.0.0",
     "mochawesome": "6.2.2",
