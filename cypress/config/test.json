@@ -3,6 +3,10 @@
   "env": {
     "BASE_URL": "http://bank-of-anthos.xyz",
     "USERNAME": "test_user",
-    "PASSWORD": "test_user"
+    "PASSWORD": "test_user",
+    "EXPENSE_WEB_LOCALHOST_URL": "http://localhost:3000/",
+    "EXPENSE_WEB_USERNAME": "testauto@gmail.com",
+    "EXPENSE_WEB_PASSWORD": "Password1"
+
   }
 }

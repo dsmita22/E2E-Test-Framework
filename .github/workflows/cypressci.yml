@@ -28,3 +28,7 @@ jobs:
         run: CYPRESS_API_URL="http://localhost:1234" cy2 run  --parallel --record --key abcdef --ci-build-id hello-cypress
       - name: E2E parallel Test
         run: CYPRESS_API_URL="http://localhost:1234" cy2 run  --parallel --record --key abcdef --ci-build-id hello-cypress
+      - name: Run k6 performance test
+        uses: k6io/action@v0.2
+        with:
+          filename: performance/perf_login.js
