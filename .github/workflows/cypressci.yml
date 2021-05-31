@@ -5,7 +5,6 @@ on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
-    continue-on-error: true
 
     steps:
       - name: Checkout repository and submodules
@@ -30,11 +29,13 @@ jobs:
 
       - name: E2E parallel Test
         run: CYPRESS_API_URL="http://localhost:1234" cy2 run  --parallel --record --key abcdef --ci-build-id hello-cypress
+        continue-on-error: true
 
       - name: E2E Api Test
         run: npm run api:test  
-
-      - name: Run k6 performance test
+        continue-on-error: true
+        
+      - name: E2E Performance test
         uses: k6io/action@v0.2.0
         with:
           filename: performance/perf_login.js

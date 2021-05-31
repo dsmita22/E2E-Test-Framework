@@ -1,5 +1,5 @@
 {
-  "name": "e2e testing framework",
+  "name": "e2e-testing-framework",
   "version": "2.0.0",
   "description": "E2E Test Framework",
   "scripts": {
