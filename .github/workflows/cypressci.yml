@@ -27,7 +27,7 @@ jobs:
       - name: Setup Sorry Cypress Environment
         run: docker-compose up -d
 
-      - name: E2E parallel Test
+      - name: E2E Webui Parallel Test
         run: CYPRESS_API_URL="http://localhost:1234" cy2 run  --parallel --record --key abcdef --ci-build-id hello-cypress
         continue-on-error: true
 
