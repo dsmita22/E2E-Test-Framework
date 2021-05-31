@@ -10,18 +10,13 @@ export let options = {
 }
 
 export default function () {
-    let url = 'http://127.0.0.1:3002/api/users/login';
-    let payload = JSON.stringify(
-        {
-            "email": "test1@gmail.com",
-            "password": "password1"
-        });
+    let url = 'http://127.0.0.1:3001/api/expenses';
     let params = {
         headers: {
             'Content-Type': 'application/json',
         },
     };
-    let res = http.post(url, payload, params);
+    let res = http.get(url, params);
 
     check(res, {
         "status was 200": (r) => r.status === 200,
