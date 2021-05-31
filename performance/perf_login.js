@@ -10,7 +10,7 @@ export let options = {
 }
 
 export default function () {
-    let url = 'http://127.0.0.1:3002/api/users/login';
+    let url = 'http://172.17.0.1:3002/api/users/login';
     let payload = JSON.stringify(
         {
             "email": "test1@gmail.com",

@@ -10,7 +10,7 @@ export let options = {
 }
 
 export default function () {
-    let url = 'http://127.0.0.1:3001/api/expenses';
+    let url = 'http://172.17.0.1:3001/api/expenses';
     let params = {
         headers: {
             'Content-Type': 'application/json',
