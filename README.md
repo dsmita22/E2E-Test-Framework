@@ -20,7 +20,11 @@
 - Open config and update test environment urls,user,pass and update it to config.js
 - Test environment json files names are case sensitive
 
-### Test:
+### Setup Test Environment:
+- `docker-compose -f ExpenseWeb\docker-compose.yml up -d`
+- `docker-compose up -d`
+
+### Run Test:
 
 - `npm run cy:run:headless` run specific test in chrome in headless mode
 - `npm run cypress:open` for test development and run

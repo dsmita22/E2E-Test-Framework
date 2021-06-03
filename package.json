@@ -10,7 +10,8 @@
     "cy:test:report": "npm run report-mkdir && npm run combine-reports && npm run generate-report",
     "cypress:open": "cypress open",
     "cy:run:headless": "cypress run --headless --browser chrome --env configFile=test --spec 'cypress/integration/tests/expenseWeb.spec.js'",
-    "api:test": "jest api/tests --detectOpenHandles"
+    "api:test": "jest api/tests --detectOpenHandles",
+    "playwright:test": "jest playwright/tests --detectOpenHandles"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,8 @@
     "supertest": "^6.1.3",
     "chai": "^4.3.4",
     "cy2": "^1.2.1",
-    "node-uuid": "^1.4.8"
+    "node-uuid": "^1.4.8",
+    "playwright": "1.11.1",
+    "playwright-lighthouse": "2.0.2"
   }
 }

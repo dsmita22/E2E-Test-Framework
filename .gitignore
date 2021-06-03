@@ -4,3 +4,4 @@
 /cypress/videos/**
 /cypress/reports
 /data
+/playwright/tests/screenshot/**
