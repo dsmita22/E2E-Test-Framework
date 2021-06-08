@@ -32,3 +32,8 @@
 ### Generate Report Locally:
 
 - `npm run cy:test:report` to combine mocha json report and generate html report
+
+### cypress Lighthouse Report:
+![image](https://user-images.githubusercontent.com/28822180/121179431-19064d80-c8a3-11eb-8a69-ae6f6c9e9f93.png)
+
+
