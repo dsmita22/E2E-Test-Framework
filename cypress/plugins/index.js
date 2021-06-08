@@ -2,6 +2,8 @@ const fs = require("fs-extra");
 const path = require("path");
 const chalk = require("chalk");
 const timeStamp = require("date-fns");
+const { lighthouse, prepareAudit } = require("cypress-audit");
+const ReportGenerator = require("lighthouse/lighthouse-core/report/report-generator");
 
 // eslint-disable-next-line no-unused-vars
 const getConfigurationByFile = (file) => {
@@ -13,6 +15,7 @@ module.exports = (on, config) => {
   // `config` is the resolved Cypress config
 
   on("before:browser:launch", (browser = {}, launchOptions) => {
+    prepareAudit(launchOptions);
     // ensureBrowserFlags(browser, launchOptions);
     if (browser.name === "chrome") {
       launchOptions.args.push("--start-fullscreen");
@@ -26,6 +29,16 @@ module.exports = (on, config) => {
 
       return launchOptions;
     }
+  });
+
+  on("task", {
+    lighthouse: lighthouse((lighthouseReport) => {
+      const dirPath = './cypress/perfReport'
+      if (!fs.existsSync(dirPath)) {
+        fs.mkdirSync(dirPath)
+      }
+      fs.writeFileSync(`${dirPath}/lhreport.html`, ReportGenerator.generateReport(lighthouseReport.lhr, 'html'));
+    }),
   });
 
   const file = config.env.configFile || "test";

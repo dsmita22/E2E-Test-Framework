@@ -39,3 +39,7 @@ jobs:
         uses: k6io/action@v0.2.0
         with:
           filename: performance/perf_login.js
+
+      - name: UI performance test
+        run: npm run ui:performance:test  
+        continue-on-error: true

@@ -5,3 +5,4 @@
 /cypress/reports
 /data
 /playwright/tests/screenshot/**
+/cypress/perfReport/**

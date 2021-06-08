@@ -1,5 +1,6 @@
 /// <reference types="Cypress" />
 import "@testing-library/cypress/add-commands";
+import 'cypress-audit/commands';
 import {
   BASE_URL,
   USERNAME,
